@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.DataAccess", "Udemy.TodoAppNTier.DataAccess\Udemy.TodoAppNTier.DataAccess.csproj", "{823343F7-A228-42D1-8E65-2F7B14E4F6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.Business", "Udemy.TodoAppNTier.Business\Udemy.TodoAppNTier.Business.csproj", "{D3B7B45B-7904-4834-8A8E-366D1693B726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.Entities", "Udemy.TodoAppNTier.Entities\Udemy.TodoAppNTier.Entities.csproj", "{CA6DC89A-591D-4520-A474-8DC3217D1C2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTierDtos", "Udemy.TodoAppNTierDtos\Udemy.TodoAppNTierDtos.csproj", "{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.UI", "Udemy.TodoAppNTier.UI\Udemy.TodoAppNTier.UI.csproj", "{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823343F7-A228-42D1-8E65-2F7B14E4F6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823343F7-A228-42D1-8E65-2F7B14E4F6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823343F7-A228-42D1-8E65-2F7B14E4F6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823343F7-A228-42D1-8E65-2F7B14E4F6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B7B45B-7904-4834-8A8E-366D1693B726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B7B45B-7904-4834-8A8E-366D1693B726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B7B45B-7904-4834-8A8E-366D1693B726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B7B45B-7904-4834-8A8E-366D1693B726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {544F847B-7FFC-4F3C-AC7B-F35303FA1916}
+	EndGlobalSection
+EndGlobal
