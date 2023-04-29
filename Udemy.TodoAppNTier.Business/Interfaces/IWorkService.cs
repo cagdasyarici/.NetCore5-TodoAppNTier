@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Udemy.TodoAppNTierDtos.WorkDtos;
+using Udemy.TodoAppNTier.Dtos.WorkDtos;
 
 namespace Udemy.TodoAppNTier.Business.Interfaces
 {
