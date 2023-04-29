@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Business
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Entities", "Udemy.TodoAppNTier.Entities\Udemy.TodoAppNTier.Entities.csproj", "{CA6DC89A-591D-4520-A474-8DC3217D1C2A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Dtos", "Udemy.TodoAppNTierDtos\Udemy.TodoAppNTier.Dtos.csproj", "{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.UI", "Udemy.TodoAppNTier.UI\Udemy.TodoAppNTier.UI.csproj", "{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Dtos", "Udemy.TodoAppNTier.Dtos\Udemy.TodoAppNTier.Dtos.csproj", "{D70B0641-05F0-4FA6-8D52-1DC3BF9322E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA6DC89A-591D-4520-A474-8DC3217D1C2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70B0641-05F0-4FA6-8D52-1DC3BF9322E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70B0641-05F0-4FA6-8D52-1DC3BF9322E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70B0641-05F0-4FA6-8D52-1DC3BF9322E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70B0641-05F0-4FA6-8D52-1DC3BF9322E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
