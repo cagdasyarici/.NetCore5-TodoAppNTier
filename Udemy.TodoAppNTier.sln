@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.DataAccess", "Udemy.TodoAppNTier.DataAccess\Udemy.TodoAppNTier.DataAccess.csproj", "{823343F7-A228-42D1-8E65-2F7B14E4F6C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.DataAccess", "Udemy.TodoAppNTier.DataAccess\Udemy.TodoAppNTier.DataAccess.csproj", "{823343F7-A228-42D1-8E65-2F7B14E4F6C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.Business", "Udemy.TodoAppNTier.Business\Udemy.TodoAppNTier.Business.csproj", "{D3B7B45B-7904-4834-8A8E-366D1693B726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Business", "Udemy.TodoAppNTier.Business\Udemy.TodoAppNTier.Business.csproj", "{D3B7B45B-7904-4834-8A8E-366D1693B726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.Entities", "Udemy.TodoAppNTier.Entities\Udemy.TodoAppNTier.Entities.csproj", "{CA6DC89A-591D-4520-A474-8DC3217D1C2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Entities", "Udemy.TodoAppNTier.Entities\Udemy.TodoAppNTier.Entities.csproj", "{CA6DC89A-591D-4520-A474-8DC3217D1C2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTierDtos", "Udemy.TodoAppNTierDtos\Udemy.TodoAppNTierDtos.csproj", "{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.Dtos", "Udemy.TodoAppNTierDtos\Udemy.TodoAppNTier.Dtos.csproj", "{2C2714B0-2F00-4380-A6C1-E9941CDD7D1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.TodoAppNTier.UI", "Udemy.TodoAppNTier.UI\Udemy.TodoAppNTier.UI.csproj", "{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Udemy.TodoAppNTier.UI", "Udemy.TodoAppNTier.UI\Udemy.TodoAppNTier.UI.csproj", "{339D9EEE-4A3B-47C5-A958-A9C68C3E87E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
