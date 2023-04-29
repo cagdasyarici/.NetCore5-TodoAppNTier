@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Udemy.TodoAppNTier.Business.Interfaces;
-using Udemy.TodoAppNTierDtos.WorkDtos;
+using Udemy.TodoAppNTier.Dtos.WorkDtos;
 
 namespace Udemy.TodoAppNTier.UI.Controllers
 {
