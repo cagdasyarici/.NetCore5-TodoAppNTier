@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Udemy.TodoAppNTier.DataAccess\Udemy.TodoAppNTier.DataAccess.csproj" />
-    <ProjectReference Include="..\Udemy.TodoAppNTierDtos\Udemy.TodoAppNTierDtos.csproj" />
+    <ProjectReference Include="..\Udemy.TodoAppNTierDtos\Udemy.TodoAppNTier.Dtos.csproj" />
   </ItemGroup>
 
 </Project>
