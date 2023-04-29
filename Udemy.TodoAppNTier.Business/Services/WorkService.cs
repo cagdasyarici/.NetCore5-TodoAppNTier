@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Udemy.TodoAppNTier.Business.Interfaces;
 using Udemy.TodoAppNTier.DataAccess.UnitOfWork;
 using Udemy.TodoAppNTier.Entities.Domains;
-using Udemy.TodoAppNTierDtos.WorkDtos;
+using Udemy.TodoAppNTier.Dtos.WorkDtos;
 
 namespace Udemy.TodoAppNTier.Business.Services
 {
