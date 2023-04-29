@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Udemy.TodoAppNTierDtos.WorkDtos
+namespace Udemy.TodoAppNTier.Dtos.WorkDtos
 {
     public class WorkListDto
     {
