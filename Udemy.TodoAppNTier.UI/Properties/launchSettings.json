@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:23305",
+      "applicationUrl": "http://localhost:24735",
       "sslPort": 0
     }
   },
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Udemy.TodoAppNTier.UI": {
+    "Udemy.ToDoAppNTier.UI": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

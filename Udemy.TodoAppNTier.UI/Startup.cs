@@ -9,9 +9,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Udemy.TodoAppNTier.Business.DependencyResolvers.Microsoft;
+using Udemy.ToDoAppNTier.Business.DependencyResolvers.Microsoft;
 
-namespace Udemy.TodoAppNTier.UI
+namespace Udemy.ToDoAppNTier.UI
 {
     public class Startup
     {
@@ -19,8 +19,8 @@ namespace Udemy.TodoAppNTier.UI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDependencies(); //Extension on bll
             services.AddControllersWithViews();
+            services.AddDependencies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -31,7 +31,13 @@ namespace Udemy.TodoAppNTier.UI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles();
+            app.UseStatusCodePagesWithReExecute("/Home/NotFound", "?code={0}");
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+                RequestPath = "/node_modules"
+            });
 
             app.UseRouting();
 

@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Udemy.TodoAppNTier.Entities.Domains;
+using Udemy.ToDoAppNTier.Entities.Domains;
 
 namespace Udemy.TodoAppNTier.DataAccess.Configurations
 {
@@ -15,10 +10,10 @@ namespace Udemy.TodoAppNTier.DataAccess.Configurations
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(x=>x.Definition).HasMaxLength(300);
-            builder.Property(x=>x.Definition).IsRequired();
+            builder.Property(x => x.Definition).HasMaxLength(300);
+            builder.Property(x => x.Definition).IsRequired(true);
 
-            builder.Property(x=>x.IsCompleted).IsRequired(true);
+            builder.Property(x => x.IsCompleted).IsRequired(true);
         }
     }
 }

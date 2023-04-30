@@ -8,7 +8,7 @@ using Udemy.TodoAppNTier.DataAccess.Contexts;
 
 namespace Udemy.TodoAppNTier.DataAccess.Migrations
 {
-    [DbContext(typeof(ToDoContext))]
+    [DbContext(typeof(TodoContext))]
     [Migration("20230429103745_InitialCreate")]
     partial class InitialCreate
     {
