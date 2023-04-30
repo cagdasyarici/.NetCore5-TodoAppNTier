@@ -3,5 +3,6 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
+    "bootstrap": "5.0.0"
   }
 }

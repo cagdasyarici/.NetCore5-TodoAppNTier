@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Udemy.TodoAppNTier.Entities\Udemy.TodoAppNTier.Entities.csproj" />
+    <ProjectReference Include="..\Udemy.ToDoAppNTier.Entities\Udemy.ToDoAppNTier.Entities.csproj" />
   </ItemGroup>
 
 </Project>

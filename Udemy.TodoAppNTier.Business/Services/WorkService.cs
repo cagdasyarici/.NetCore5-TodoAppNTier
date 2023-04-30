@@ -1,82 +1,117 @@
-﻿using System;
+﻿using AutoMapper;
+using FluentValidation;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Udemy.TodoAppNTier.Business.Interfaces;
-using Udemy.TodoAppNTier.DataAccess.UnitOfWork;
-using Udemy.TodoAppNTier.Entities.Domains;
-using Udemy.TodoAppNTier.Dtos.WorkDtos;
+using Udemy.TodoAppNTier.Common.ResponseObjects;
+using Udemy.TodoAppNTier.DataAccess.UnitofWork;
+using Udemy.ToDoAppNTier.Business.Interfaces;
+using Udemy.ToDoAppNTier.Business.ValidationRules;
+using Udemy.ToDoAppNTier.Dtos.Interfaces;
+using Udemy.ToDoAppNTier.Dtos.WorkDtos;
+using Udemy.ToDoAppNTier.Entities.Domains;
 
-namespace Udemy.TodoAppNTier.Business.Services
+namespace Udemy.ToDoAppNTier.Business.Services
 {
     public class WorkService : IWorkService
     {
         private readonly IUow _uow;
-
-        public WorkService(IUow uow)
+        private readonly IMapper _mapper;
+        private readonly IValidator<WorkCreateDto> _createDtoValidator;
+        private readonly IValidator<WorkUpdateDto> _updateDtoValidator;
+        public WorkService(IUow uow, IMapper mapper, IValidator<WorkCreateDto> createDtoValidator, IValidator<WorkUpdateDto> updateDtoValidator)
         {
             _uow = uow;
+            _mapper = mapper;
+            _createDtoValidator = createDtoValidator;
+            _updateDtoValidator = updateDtoValidator;
         }
 
-        public async Task Create(WorkCreateDto dto)
+        public async Task<IResponse<WorkCreateDto>> Create(WorkCreateDto dto)
         {
-            await _uow.GetRepository<Work>().Create(new()
+            var validationResult = _createDtoValidator.Validate(dto);
+
+            if (validationResult.IsValid)
             {
-                Definition = dto.Definition,
-                IsCompleted = dto.IsCompleted
-            });
-            await _uow.SaveChanges();
-        }
-
-        public async Task<List<WorkListDto>> GetAll()
-        {
-            var list = await _uow.GetRepository<Work>().GetAll();
-
-            var workList = new List<WorkListDto>();
-
-            if (list != null && list.Count > 0)
+                await _uow.GetRepository<Work>().Create(_mapper.Map<Work>(dto));
+                await _uow.SaveChanges();
+                return new Response<WorkCreateDto>(ResponseType.Success, dto);
+            }
+            else
             {
-                foreach (var work in list)
+                List<CustomValidationError> errors = new();
+                foreach (var error in validationResult.Errors)
                 {
-                    workList.Add(new()
+                    errors.Add(new()
                     {
-                        Definition = work.Definition,
-                        Id = work.Id,
-                        IsCompleted = work.IsCompleted,
+                        ErrorMessage = error.ErrorMessage,
+                        PropertyName = error.PropertyName
                     });
                 }
+
+                return new Response<WorkCreateDto>(ResponseType.ValidationError, dto, errors);
             }
-            return workList;
         }
 
-        public async Task<WorkListDto> GetById(object id)
+        public async Task<IResponse<List<WorkListDto>>> GetAll()
         {
-            var work = await _uow.GetRepository<Work>().GetById(id);
-            return new()
+            var data = _mapper.Map<List<WorkListDto>>(await _uow.GetRepository<Work>().GetAll());
+            return new Response<List<WorkListDto>>(ResponseType.Success, data);
+        }
+
+        public async Task<IResponse<IDto>> GetById<IDto>(int id)
+        {
+
+            var data = _mapper.Map<IDto>(await _uow.GetRepository<Work>().GetByFilter(x => x.Id == id));
+            if (data == null)
             {
-                Definition = work.Definition,
-                IsCompleted = work.IsCompleted
-            };
+                return new Response<IDto>(ResponseType.NotFound, $"{id} ye ait data bulunamadı");
+            }
+            return new Response<IDto>(ResponseType.Success, data);
         }
 
-        public async  Task Remove(object id)
+        public async Task<IResponse> Remove(int id)
         {
-            var deleted = await _uow.GetRepository<Work>().GetById(id);
-            _uow.GetRepository<Work>().Remove(deleted);
-            await _uow.SaveChanges();
-        }
-
-        public async Task Update(WorkUpdateDto dto)
-        {
-            _uow.GetRepository<Work>().Update(new()
+            var removedEntity = await _uow.GetRepository<Work>().GetByFilter(x => x.Id == id);
+            if (removedEntity != null)
             {
-                Definition = dto.Definition,
-                Id = dto.Id,
-                IsCompleted = dto.IsCompleted,
-            });
+                _uow.GetRepository<Work>().Remove(removedEntity);
+                await _uow.SaveChanges();
+                return new Response(ResponseType.Success);
+            }
+            return new Response(ResponseType.NotFound, $"{id} ye ait data bulunamadı");
 
-            await _uow.SaveChanges();
+        }
+
+
+        public async Task<IResponse<WorkUpdateDto>> Update(WorkUpdateDto dto)
+        {
+            var result = _updateDtoValidator.Validate(dto);
+            if (result.IsValid)
+            {
+                var updatedEntity = await _uow.GetRepository<Work>().Find(dto.Id);
+                if (updatedEntity != null)
+                {
+                    _uow.GetRepository<Work>().Update(_mapper.Map<Work>(dto), updatedEntity);
+                    await _uow.SaveChanges();
+                    return new Response<WorkUpdateDto>(ResponseType.Success, dto);
+                }
+                return new Response<WorkUpdateDto>(ResponseType.NotFound, $"{dto.Id} ye ait data bulunamadı");
+            }
+            else
+            {
+                List<CustomValidationError> errors = new();
+                foreach (var error in result.Errors)
+                {
+                    errors.Add(new()
+                    {
+                        ErrorMessage = error.ErrorMessage,
+                        PropertyName = error.PropertyName
+                    });
+                }
+
+                return new Response<WorkUpdateDto>(ResponseType.ValidationError, dto, errors);
+            }
+
         }
     }
 }

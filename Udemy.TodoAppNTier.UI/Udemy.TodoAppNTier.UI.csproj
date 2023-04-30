@@ -12,12 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\Udemy.ToDoAppNTier.Business\Udemy.ToDoAppNTier.Business.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Udemy.TodoAppNTier.Business\Udemy.TodoAppNTier.Business.csproj" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

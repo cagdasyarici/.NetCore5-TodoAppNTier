@@ -7,18 +7,18 @@ using Udemy.TodoAppNTier.DataAccess.Contexts;
 
 namespace Udemy.TodoAppNTier.DataAccess.Migrations
 {
-    [DbContext(typeof(ToDoContext))]
-    partial class ToDoContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(TodoContext))]
+    partial class TodoContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.17")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Udemy.TodoAppNTier.Entities.Domains.Work", b =>
+            modelBuilder.Entity("Udemy.ToDoAppNTier.Entities.Domains.Work", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
